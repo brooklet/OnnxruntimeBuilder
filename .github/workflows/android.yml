@@ -31,11 +31,11 @@ jobs:
           $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --install "ndk;${{ matrix.ver.ndk }}"
           echo "ANDROID_NDK_HOME=$ANDROID_HOME/ndk/${{ matrix.ver.ndk }}" >> $GITHUB_ENV
 
-      # 删除ndk -g参数
-      - name: ndk del -g
-        run: |
-          echo $ANDROID_NDK_HOME
-          sed -i -e '/^  -g$/d' $ANDROID_NDK_HOME/build/cmake/android-legacy.toolchain.cmake
+      # # 删除ndk -g参数
+      # - name: ndk del -g
+      #   run: |
+      #     echo $ANDROID_NDK_HOME
+      #     sed -i -e '/^  -g$/d' $ANDROID_NDK_HOME/build/cmake/android-legacy.toolchain.cmake
 
       - name: Set up Python
         uses: actions/setup-python@v5
