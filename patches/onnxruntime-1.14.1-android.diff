@@ -5,4 +5,4 @@
    )
  endif()
 +
-+string(REPLACE "-Werror" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
++string(REPLACE "-Werror=format-security" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
