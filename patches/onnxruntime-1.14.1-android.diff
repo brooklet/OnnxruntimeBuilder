@@ -9,3 +9,12 @@
  
  set_property(GLOBAL PROPERTY USE_FOLDERS ON)
  # NOTE: POSITION INDEPENDENT CODE hurts performance, and it only make sense on POSIX systems
+
+--- a/cmake/CMakeLists.txt
++++ b/cmake/CMakeLists.txt
+@@ -1617,3 +1617,5 @@ if (onnxruntime_ENABLE_EXTERNAL_CUSTOM_OP_SCHEMAS)
+     COMMENT "Installing protobuf"
+   )
+ endif()
++
++string(REPLACE "-Werror" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
