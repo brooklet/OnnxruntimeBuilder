@@ -88,6 +88,8 @@ else
     echo "#2 MIN_SDK is empty, use 21"
 fi
 
+patch -p0 -i ../patches/onnxruntime-1.14.1-android.diff
+
 pyBuild $1 $2
 
 #echo "message(\"OnnxRuntime Path: \${CMAKE_CURRENT_LIST_DIR}/\${ANDROID_ABI}\")" > OnnxRuntimeWrapper.cmake

@@ -1,0 +1,25 @@
+From 4c4762582ddeeb95ce259ab668dd4871023ff880 Mon Sep 17 00:00:00 2001
+From: 
+Date: Fri, 1 Aug 2025 16:39:35 +0800
+Subject: [PATCH] bugfixs
+
+---
+ cmake/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cmake/CMakeLists.txt b/cmake/CMakeLists.txt
+index a5d28fb516..a86d546e67 100644
+--- a/cmake/CMakeLists.txt
++++ b/cmake/CMakeLists.txt
+@@ -23,7 +23,7 @@ include(CheckLanguage)
+ include(CMakeDependentOption)
+ include(FetchContent)
+ 
+-set(CMAKE_CXX_STANDARD 17)
++set(CMAKE_CXX_STANDARD 14)
+ 
+ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+ # NOTE: POSITION INDEPENDENT CODE hurts performance, and it only make sense on POSIX systems
+-- 
+2.39.1.windows.1
+
