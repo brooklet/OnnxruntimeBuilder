@@ -1,9 +1,11 @@
 --- a/cmake/CMakeLists.txt
 +++ b/cmake/CMakeLists.txt
-@@ -1617,3 +1617,6 @@
+@@ -1617,3 +1617,8 @@
      COMMENT "Installing protobuf"
    )
  endif()
 +
 +string(REPLACE "-Werror=format-security" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 +add_compile_options(-Wno-deprecated-declarations)
++target_link_options(${CMAKE_PROJECT_NAME} PRIVATE "-Wl,-z,max-page-size=16384")
++target_link_options(${CMAKE_PROJECT_NAME} PRIVATE "-Wl,-z,common-page-size=16384")
