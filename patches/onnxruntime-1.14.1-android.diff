@@ -1,6 +1,8 @@
 --- a/cmake/CMakeLists.txt
 +++ b/cmake/CMakeLists.txt
-@@ -1619,1 +1619,3 @@
+@@ -1617,3 +1617,5 @@
+     COMMENT "Installing protobuf"
+   )
  endif()
 +
 +string(REPLACE "-Werror" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
