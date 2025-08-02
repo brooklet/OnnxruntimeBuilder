@@ -38,6 +38,7 @@ function collectLibs() {
     cp CMakeFiles/onnxruntime.dir/link.txt install-static/link.log
 }
 
+    # --build_java \
 function pyBuild() {
     echo ANDROID_HOME=$ANDROID_HOME
     echo ANDROID_NDK_HOME=$ANDROID_NDK_HOME
@@ -46,7 +47,6 @@ function pyBuild() {
     --parallel \
     --skip_tests \
     --build_shared_lib \
-    --build_java \
     --android \
     --android_abi $1 \
     --android_api $2 \
